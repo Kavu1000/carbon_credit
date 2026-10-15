@@ -1,0 +1,9 @@
+.header-actions { display: flex; align-items: center; gap: 12px; }
+.register-link { color: #31563e; font-size: 13px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+.register-link:hover { text-decoration: underline; }
+.language-switch { display: inline-flex; overflow: hidden; border: 1px solid #b9c7a7; border-radius: 3px; background: #fffefa; }
+.language-switch button { border: 0; background: transparent; padding: 8px 9px; color: #57705b; font: 500 11px var(--mono); }
+.language-switch button.selected { background: #e0ecc7; color: #254a37; }
+[lang='lo'] { font-family: var(--font-sans), "Noto Sans Lao", sans-serif; }
+[lang='lo'] .eyebrow { line-height: 1.5; }
+@media (max-width: 760px) { .header-actions { gap: 7px; } .language-switch button { padding: 7px; } }

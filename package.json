@@ -1,0 +1,29 @@
+{
+  "name": "carbon-credit",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "contract:compile": "solcjs --base-path . --include-path node_modules --abi --bin contracts/LandParcelNFT.sol -o .solc-build",
+    "contract:deploy:sepolia": "npm run contract:compile && node --env-file=.env.local scripts/deploy-land-parcel.mjs"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
+    "next": "^15.5.9",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "viem": "^2.45.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "postcss": "^8.5.30",
+    "solc": "^0.8.30",
+    "tailwindcss": "^4.3.3"
+  }
+}
